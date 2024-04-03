@@ -1,2 +1,2 @@
 #!/bin/sh
-echo -n ' '"$(sensors -j | jq 'map(.).[0].temp3.temp3_input' | sed 's/\(.*\)\..*/\1/')"'°C'
+echo -n ' '"$(sensors -j | jq '."k10temp-pci-00c3".temp1.temp1_input' | sed 's/\(.*\)\..*/\1/')"'°C'
